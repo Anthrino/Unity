@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	id="WebApp_ID" version="3.1">
+	<display-name>Unity</display-name>
+	<welcome-file-list>
+		<welcome-file>/Unity.jsp</welcome-file>
+	</welcome-file-list>
+	<session-config>
+		<session-timeout>30</session-timeout>
+	</session-config>
+	<servlet>
+		<servlet-name>userservlet</servlet-name>
+		<servlet-class>com.anthrino.unity.server.UserServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>userservlet</servlet-name>
+		<url-pattern>/login</url-pattern>
+		<url-pattern>/signup</url-pattern>
+		<url-pattern>/account</url-pattern>
+		<url-pattern>/logout</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>movieservlet</servlet-name>
+		<servlet-class>com.anthrino.unity.server.MovieServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>gameservlet</servlet-name>
+		<servlet-class>com.anthrino.unity.server.GamesServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>softwareservlet</servlet-name>
+		<servlet-class>com.anthrino.unity.server.SoftwareServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>cartservlet</servlet-name>
+		<servlet-class>com.anthrino.unity.server.CartServlet</servlet-class>
+	</servlet>
+
+	
+
+	<servlet-mapping>
+		<servlet-name>movieservlet</servlet-name>
+		<url-pattern>/moviesearch</url-pattern>
+		<url-pattern>/moviepage</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>gameservlet</servlet-name>
+		<url-pattern>/gamesearch</url-pattern>
+		<url-pattern>/gamepage</url-pattern>
+		</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>softwareservlet</servlet-name>
+		<url-pattern>/softwaresearch</url-pattern>
+		<url-pattern>/softwarepage</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>cartservlet</servlet-name>
+		<url-pattern>/cart</url-pattern>
+		<url-pattern>/productpage</url-pattern>
+		<url-pattern>/addtoCart</url-pattern>
+		</servlet-mapping>
+
+</web-app>

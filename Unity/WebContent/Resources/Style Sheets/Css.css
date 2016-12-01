@@ -1,0 +1,122 @@
+@import 'https://fonts.googleapis.com/css?family=PT+Sans';
+#hover a:hover{
+	color:white;
+    font-family: 'PT Sans', sans-serif;
+    font-size:19px;
+}
+
+#hover{
+	width:112px;
+	text-align:center;
+	font-size:18px;
+    color:white;
+    font-family: 'PT Sans', sans-serif;
+    transition: all 5s;
+}
+
+body{
+  color:chartreuse;
+}
+
+#head{
+	color:chartreuse;
+	padding-left:230px;
+}
+
+.ft{
+	padding-right:7px;
+	padding-left:7px;
+	font-size:15px;
+	color:black;	
+}
+#cat{
+	text-align:center;
+	font-size:17px;
+}
+
+.jumbotron {
+    background: #358CCE;
+    color:white;
+    border-radius: 4px;
+}
+
+label{
+    color:black;
+}
+
+.navbar {
+    margin-bottom: -50px;
+	border-radius:0;
+	padding-bottom:50px;
+	border:0px;
+    background-color: transparent;
+}
+
+.nav.navbar-nav li a{
+    color:chartreuse;
+}
+
+#navb{
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 20px;
+}
+
+html,body{     
+    height:100%;
+    font-family: 'PT Sans', sans-serif;
+}
+
+.button{
+  border-radius: 4px;
+  background-color: dodgerblue;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 24px;
+  width: 100px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -10px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.button{
+    padding: 0px;
+    margin:0px;
+    
+}
+a{
+    color:chartreuse;
+}
+a:hover{
+    text-decoration: none;
+    color:white;
+}
+.title{
+    font-size: 17px;
+    color: chartreuse;
+}
