@@ -60,6 +60,7 @@ public class CartDao
 				product.setTitle(rs.getString("P_Title"));
 				product.setCategory(rs.getString("Category"));
 				product.setPrice(rs.getInt("Price"));
+				product.setProduct_id(rs.getInt("Product_ID"));
 				price_total += product.getPrice();
 				list.add(product);
 			}
@@ -78,18 +79,19 @@ public class CartDao
 		list.add(temp);
 		return list;
 	}
-	public boolean deleteProduct(UserDto user, int Product_ID, String P_Title, int Price, String Category)
+	public boolean deleteProduct(UserDto user, int Product_ID, String P_Title)
 	{
-		String query = "DELETE FROM [dbo].[Cart] WHERE User_ID = "+user.getUser_id()+", "
-				+ "Product_ID = "+Product_ID+" AND P_Title = "+P_Title;
+		String query = "DELETE FROM [dbo].[Cart] WHERE User_ID = "+user.getUser_id()+" AND "
+				+ "Product_ID = "+Product_ID+" AND P_Title = '"+P_Title+"'";
 		try 
 		{
 			Connection con = ConnectionProvider.getConnection();
 			Statement stmt = con.createStatement();
-			ResultSet rs = stmt.executeQuery(query);
+			boolean status = stmt.execute(query);
 			stmt.close();
 			con.close();
-			return rs.rowDeleted();
+			if(status)
+				return status;
 		} 
 		catch (Exception e) 
 		{

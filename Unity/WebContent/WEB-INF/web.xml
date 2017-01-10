@@ -67,6 +67,7 @@
 		<url-pattern>/cart</url-pattern>
 		<url-pattern>/productpage</url-pattern>
 		<url-pattern>/addtoCart</url-pattern>
-		</servlet-mapping>
+		<url-pattern>/deleteproduct</url-pattern>
+	</servlet-mapping>
 
 </web-app>

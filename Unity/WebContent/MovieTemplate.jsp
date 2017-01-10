@@ -236,7 +236,7 @@ footer {
 								</h5>| <span
 									style="color: gold"> &#8360;. </span><span id="price"
 									style="color: gold; font-size: 25px;"><jsp:getProperty
-											property="price" name="movie" /></span></span><br> <br>
+											property="price" name="movie" /></span><br> <br>
 								<div class="btn-group btn-group-justified" role="group"
 									aria-label="Justified button group">
 									<div class="btn-group" role="group">

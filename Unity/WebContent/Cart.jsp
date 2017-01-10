@@ -127,6 +127,27 @@ function getProduct(title, category) {
 		form.submit();
 		
 	}
+	
+	function removeProduct(title, id)
+	{
+		confirm('Remove Product : '+ title + '?');
+		var form = document.createElement('form');
+	    var input = document.createElement('input');
+	    form.method = "GET";
+	    var hiddenField1 = document.createElement("input");
+	    hiddenField1.setAttribute("type", "hidden");
+	    hiddenField1.setAttribute("name", "title");
+	    hiddenField1.setAttribute("value", title);
+	    var hiddenField2 = document.createElement("input");
+	    hiddenField2.setAttribute("type", "hidden");
+	    hiddenField2.setAttribute("name", "id");
+	    hiddenField2.setAttribute("value", id);
+	    form.appendChild(hiddenField1); 
+	    form.appendChild(hiddenField2); 
+	    form.action = "deleteproduct";
+	    form.submit();
+
+	}
 </script>
 </head>
 <body>
@@ -147,6 +168,7 @@ function getProduct(title, category) {
 		        <th>Product</th>
 		        <th>Quantity</th>
 		        <th>Price</th>
+		        <th></th>
 		      </tr>
 		    </thead>
 			<tbody>
@@ -156,8 +178,18 @@ function getProduct(title, category) {
 						<td class="name"><a onclick="getProduct('${ product.title }','${ product.category }')" >${ product.title }</a><br> Category: ${ product.category }</td> 
 						<td> Quantity : 1 DVD </td>
 						<td class="price">&#8360;.&nbsp;${ product.price }</td>
+						<td>
+							<div class="col-md-12">
+                        	<button type="button" onclick="removeProduct('${ product.title }','${ product.product_id }')" class="btn btn-primary pull-right" id="btnContactUs"
+                        	 style="background-color:black;color:chartreuse;">
+                            	Remove
+                            </button>
+                			</div>
+                		</td>
 					</tr>
+					
 				</c:if>
+				
 				<c:if test="${ empty product.title && not empty product.price }">
 					<td>
 			   		</td>
@@ -171,7 +203,8 @@ function getProduct(title, category) {
 			</tbody>
 			</table>
 			<br><br>
-			<a href="<%=request.getContextPath()%>/Unity.jsp"> <button type="button" style="background-color: black; font-size:120%;color: chartreuse;width:20em;height:5em;"
+			<a href="<%=request.getContextPath()%>/Unity.jsp"> <button type="button" style="background-color: black; font-size:120%;
+			color: chartreuse;width:20em;height:5em;margin-bottom:10px;float:right;"
 			   			class="btn btn-default ">Checkout</button></a>
 		</div>
 	</div>

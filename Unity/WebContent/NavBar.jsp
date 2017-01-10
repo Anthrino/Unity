@@ -48,6 +48,14 @@ $(document).ready(function()
 		$("#accountmenu").slideToggle();
 	})
 })
+function pageTrack()
+{
+	
+	var prevtrack = document.URL;
+	alert(prevtrack);
+	session.setAttribute("prevtrack",prevtrack);
+	alert('session.setAttribute("prevtrack")');
+}
 </script>
 </head>
 <body>
@@ -90,11 +98,11 @@ $(document).ready(function()
 					</c:when>
 					<c:otherwise>
 						<li id="hover" style="padding-right:150px;"><a
-							href="<%=request.getContextPath()%>/Login.jsp">Login&nbsp;&forall;&nbsp;SignUp</a></li>
+							href="<%=request.getContextPath()%>/Login.jsp" onclick="pageTrack()">Login&nbsp;&forall;&nbsp;SignUp</a></li>
 					</c:otherwise>
 				</c:choose>
 				<li id="hover" style="width:100px;padding-right:50px;"><a
-					href="<%=request.getContextPath()%>/HTML Pages/Contact.html">Contact&nbsp;Us</a></li>				
+					href="<%=request.getContextPath()%>/Contact.jsp">Contact&nbsp;Us</a></li>				
 			</ul>
 		</div>
 	</div>

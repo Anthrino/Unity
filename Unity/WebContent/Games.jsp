@@ -31,8 +31,8 @@ html, body {
 	font-family: 'PT Sans', sans-serif;
 	text-align: center;
 	align-content: center;
-	background: radial-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.25),
-		rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.85));
+	background: radial-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.65),
+		rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.95));
 }
 
 @import 'https://fonts.googleapis.com/css?family=PT+Sans';
@@ -637,7 +637,6 @@ a:link {
 		</div>
 		<br> <br>
 		<hr>
-		<br>
 	</div>
 	<!-- -->
 	<!-- FOOTER -->

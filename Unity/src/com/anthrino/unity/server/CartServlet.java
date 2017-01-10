@@ -39,14 +39,14 @@ public class CartServlet extends HttpServlet {
 		else if( request.getRequestURL().toString().contains("cart"))
 		{
 			ArrayList<CartDto> list = dbaccess.getProductList(user);
-			System.out.print("getting list :");
+			//System.out.print("getting list :");
 
 			request.setAttribute("product_list",list);
 			request.getRequestDispatcher("/Cart.jsp").include(request, response);
 		}
 		else if( request.getRequestURL().toString().contains("addtoCart"))
 		{
-			System.out.print("adding to cart :");
+			//System.out.print("adding to cart :");
 			if( request.getParameter("type").equals("buy"))
 			{
 				System.out.println(dbaccess.insertProduct(user,Integer.parseInt(request.getParameter("id")),request.getParameter("title"),
@@ -64,7 +64,7 @@ public class CartServlet extends HttpServlet {
 		if( request.getRequestURL().toString().contains("productpage"))
 		{
 			String P_Title = (String) request.getParameter("title");
-			System.out.println("in pp:"+P_Title);
+			//System.out.println("in pp:"+P_Title);
 			if(request.getParameter("category").equals("game"))
 			{
 				GameDto game = new GameDao().getGame(P_Title);
@@ -83,6 +83,18 @@ public class CartServlet extends HttpServlet {
 				request.setAttribute("software",software);
 				request.getRequestDispatcher("/SoftwareTemplate.jsp").include(request, response);
 			}
+			
+		}
+		if( request.getRequestURL().toString().contains("deleteproduct"))
+		{
+			String P_Title = (String) request.getParameter("title");
+			int P_ID = Integer.parseInt(request.getParameter("id"));
+
+			//System.out.println("deleting product : "+P_Title);
+			dbaccess.deleteProduct(user,P_ID, P_Title);
+			ArrayList<CartDto> list = dbaccess.getProductList(user);
+			request.setAttribute("product_list",list);
+			request.getRequestDispatcher("/Cart.jsp").include(request, response);
 			
 		}
 	

@@ -8,18 +8,13 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Login &#8226; Sign-Up - Unity</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet"
-	href="<%=request.getContextPath()%>/Resources/Style Sheets/Bootstrap.css">
-<link rel="shortcut icon"
-	href="<%=request.getContextPath()%>/Resources/Images/Icons/title.ico" />
-<script
-	src="<%=request.getContextPath()%>/Resources/JS Sheets/GoogleApis.js"></script>
-<script
-	src="<%=request.getContextPath()%>/Resources/JS Sheets/Bootstrap1.js"></script>
-<script
-	src="<%=request.getContextPath()%>/Resources/JS Sheets/customjs.js"></script>
-<style
-	src="<%=request.getContextPath()%>/Resources/Style Sheets/Css.css"></style>
+<link rel="stylesheet" href="<%=request.getContextPath()%>/Resources/Style Sheets/Bootstrap.css">
+<link rel="shortcut icon" href="<%=request.getContextPath()%>/Resources/Images/Icons/title.ico" />
+<script	src="<%=request.getContextPath()%>/Resources/JS Sheets/GoogleApis.js"></script>
+<script	src="<%=request.getContextPath()%>/Resources/JS Sheets/Bootstrap1.js"></script>
+<script	src="<%=request.getContextPath()%>/Resources/JS Sheets/customjs.js"></script>
+<link rel="stylesheet" href="<%=request.getContextPath()%>/Resources/Style Sheets/Css.css">
+
 <style>
 @import 'https://fonts.googleapis.com/css?family=PT+Sans';
 
@@ -28,7 +23,10 @@ html, body {
 	font-family: 'PT Sans', sans-serif;
 	color: chartreuse;
 }
-
+.form-group
+{
+		color: chartreuse;
+}
 .bg {
 	background:
 		url('<%=request.getContextPath()%>/Resources/Images/Wallpapers/W.jpeg');
