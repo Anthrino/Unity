@@ -159,7 +159,7 @@ function getProduct(title, category) {
 	<div class="parallax-window" data-parallax="scroll" 
 		data-image-src="<%=request.getContextPath()%>/Resources/Images/Wallpapers/cart.jpg">
 		<h2 class="head">Cart</h2>
-		<hr>
+		<hr>"WebContent/Cart.jsp"
 		<br>
 		<div class="container">
 		  <table class="table">
