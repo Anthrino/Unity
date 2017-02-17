@@ -9,4 +9,8 @@ Front end user interface consists of Webpages designed using HTML5, CSS, JavaScr
 
 Game/Movie/Software DVD data displayed is drawn from a database on Microsoft SQL Server and also from IMDB( movie data ).
 
+// WebContent folder contains all the associated JSP files that forms the front end user interface.
+
+// src contains all the java files for the server, including Data Access and Transfer objects [DAOs & DTOs] and the Servlet Controller files in the /server folder.
+
 
